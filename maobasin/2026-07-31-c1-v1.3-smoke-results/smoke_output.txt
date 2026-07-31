@@ -1,0 +1,33 @@
+== 环境 ==
+python 3.12.12 | torch 2.8.0+cu128 | device cpu 2-core sandbox
+
+== pytest ==
+...............................                                          [100%]
+31 passed in 3.71s
+
+== 20-step smoke ==
+NOTE: validation_episodes is not the frozen formal value 4096; this run is diagnostic only.
+oracle-left seed=1 step=    1 free_c=0.078 free_v=0.062 chain=0.000 given4=0.172 lr=1.579e-05
+oracle-left seed=1 step=   10 free_c=0.094 free_v=0.016 chain=0.000 given4=0.266 lr=1.579e-04
+oracle-left seed=1 step=   20 free_c=0.125 free_v=0.047 chain=0.000 given4=0.188 lr=3.000e-05
+{
+  "oracle-left/seed-1": {
+    "answer_acc": 0.046875,
+    "answer_nll": 2.7848491966724396,
+    "answer_tokens": 64.0,
+    "answer_top4_recall": 0.234375,
+    "best_step": 20,
+    "episode_value_probability_mass": 0.25132359750568867,
+    "free_chain_exact_acc": 0.0,
+    "free_code_acc": 0.125,
+    "free_code_nll": 2.753993183374405,
+    "free_v_given4_acc": 0.1875,
+    "free_value_acc": 0.046875,
+    "free_value_nll": 2.7848491966724396,
+    "full_lm_loss": 5.4851590394973755,
+    "given4_acc": 0.1875,
+    "teacher_forced_value_acc": 0.0625,
+    "teacher_forced_value_nll": 2.781123250722885,
+    "top1_is_episode_value": 0.296875
+  }
+}
